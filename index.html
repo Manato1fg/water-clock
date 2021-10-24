@@ -3,6 +3,17 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta charset="utf-8">
         <title>water clock -HOME-</title>
+        <script>
+            if (screen.width < 450){
+                var viewport = document.querySelector("meta[name=viewport]");
+                viewport.parentNode.removeChild(viewport);
+
+                var newViewport = document.createElement("meta");
+                newViewport.setAttribute("name", "viewport");
+                newViewport.setAttribute("content", "width=450");
+                document.head.appendChild(newViewport);
+            }
+        </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
@@ -29,16 +40,6 @@
         </span>
       </div>
       <script>
-            if (screen.width < 450){
-                var viewport = document.querySelector("meta[name=viewport]");
-                viewport.parentNode.removeChild(viewport);
-
-                var newViewport = document.createElement("meta");
-                newViewport.setAttribute("name", "viewport");
-                newViewport.setAttribute("content", "width=450");
-                document.head.appendChild(newViewport);
-            }
-
             function handle_input(el, type, index){
                 if(el.value.length >= 1) {
                     el.value = el.value.slice(-1);

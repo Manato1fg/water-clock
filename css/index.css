@@ -11,9 +11,11 @@ body {
     height: 70px;
     width: 100%;
     position: relative;
+    text-align: center;
 }
 
 .number-input {
+    padding: 0;
     width: 51px;
     height: 70px;
     margin: 0px;
