@@ -1,0 +1,52 @@
+#main-canvas {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#input-span {
+    height: 70px;
+    width: 100%;
+    position: relative;
+}
+
+.number-input {
+    width: 51px;
+    height: 70px;
+    margin: 0px;
+    font-size: 40px;
+    border-radius: 3px; /*ボックス角の丸み*/
+    border: 2px solid #fff; /*枠線*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    text-align: center;
+    color: rgb(247, 206, 72);
+    background-color: rgb(15, 74, 11);
+    position: relative;
+}
+
+::placeholder {
+    color: rgba(247, 228, 166, 0.74);
+}
+
+.split {
+    font-size: 21px;
+    color: white;
+    position: relative;
+    top: 35px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+a.btn {
+    margin-top: 50px;
+    font-size: 1.6rem;
+}

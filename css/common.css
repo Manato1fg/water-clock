@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(15, 74, 11);
+}
+#main-container {
+    width: 100vw;
+    height: 100vh;
+}
+.flexbox-container-vertical-center {
+    display: flex; /* 変更なし */
+    flex-direction: column; /* 変更なし */
+    justify-content: center; /* 変更なし */
+    align-items: center; /* 変更なし */
+}
+
+.btn--yellow,
+a.btn--yellow {
+  color: #fff;
+  background-color: rgb(247, 206, 72);
+}
+.btn--yellow:hover,
+a.btn--yellow:hover {
+  color: #fff;
+  background: rgb(247, 206, 72);
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+
+a.btn {
+  font-size: 1.0rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
