@@ -16,6 +16,17 @@
         </span>
         <span><a class="btn btn--yellow btn--radius" onclick="reset()">RESET</a> <a class="btn btn--yellow btn--radius" onclick="back()">BACK</a></span>
       </div>
+      <script>
+            if (screen.width < 600){
+                var viewport = document.querySelector("meta[name=viewport]");
+                viewport.parentNode.removeChild(viewport);
+
+                var newViewport = document.createElement("meta");
+                newViewport.setAttribute("name", "viewport");
+                newViewport.setAttribute("content", "width=600");
+                document.head.appendChild(newViewport);
+            }
+      </script>
       <script src="./js/clock.js"></script>
       <script>
             function back() {

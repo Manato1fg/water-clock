@@ -26,6 +26,16 @@
         </span>
       </div>
       <script>
+            if (screen.width < 600){
+                var viewport = document.querySelector("meta[name=viewport]");
+                viewport.parentNode.removeChild(viewport);
+
+                var newViewport = document.createElement("meta");
+                newViewport.setAttribute("name", "viewport");
+                newViewport.setAttribute("content", "width=600");
+                document.head.appendChild(newViewport);
+            }
+
             function handle_input(el, type, index){
                 if(el.value.length >= 1) {
                     el.value = el.value.slice(-1);
@@ -64,6 +74,11 @@
                 var s2 = document.getElementById("second2").value == "" ? 0 : Number.parseInt(document.getElementById("second2").value);
 
                 var val = h1 * 36000 + h2 * 3600 + m1 * 600 + m2 * 60 + s1 * 10 + s2;
+
+                if(val == 0) {
+                    alert("Set the value greater than 1 seconds or equal to.");
+                    return;
+                }
                 location.href = "./clock.html?time="+val;
             }
       </script>
